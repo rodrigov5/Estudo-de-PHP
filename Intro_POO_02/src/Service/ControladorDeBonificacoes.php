@@ -1,7 +1,7 @@
 <?php
 
 namespace Estudo\Banco\Service;
-use Estudo\Banco\Modelo\Funcionario;
+use Estudo\Banco\Modelo\Funcionario\Funcionario;
 
 class ControladorDeBonificacoes 
 {

@@ -1,8 +1,11 @@
 <?php
 
-namespace Estudo\Banco\Modelo;
+namespace Estudo\Banco\Modelo\Funcionario;
 
-class Funcionario extends Pessoa 
+use Estudo\Banco\Modelo\Pessoa;
+use Estudo\Banco\Modelo\CPF;
+
+abstract class Funcionario extends Pessoa
 {
   private string $cargo;
   private float $salario;
@@ -33,5 +36,14 @@ class Funcionario extends Pessoa
   public function calculaBonificacao(): float 
   {
     return $this->salario * 0.1;
+  }
+
+  public function recebeAumento(float $valorAumento): void{
+    if ($valorAumento < 0) {
+      echo "Aumento deve ser positivo";
+      return;
+    }
+
+    $this->salario += $valorAumento;
   }
 }
