@@ -2,7 +2,7 @@
 
 namespace Estudo\Banco\Modelo;
 
-class CPF {
+final class CPF {
   private $cpf;
 
   public function __construct(string $cpf) 

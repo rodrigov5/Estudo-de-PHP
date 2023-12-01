@@ -2,7 +2,11 @@
 
 namespace Estudo\Banco\Modelo;
 
-class Endereco {
+
+final class Endereco
+{	
+	use AcessoPropriedades;
+
 	public string $cidade;
 	public string $bairro;
 	public string $rua;
